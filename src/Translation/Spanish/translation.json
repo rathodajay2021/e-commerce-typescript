@@ -3,5 +3,6 @@
     "header.navList.collections": "colecciones",
     "header.navList.brands": "marcas",
     "header.navList.new": "nuevo",
-    "header.navList.sales": "ventas"
+    "header.navList.sales": "ventas",
+    "header.inputField.placeHolder.search": "buscar..."
 }

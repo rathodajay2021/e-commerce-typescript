@@ -7,8 +7,20 @@ export const LANGUAGES: languageType[] = [
     language: "english",
   },
   {
-    id:2,
-    languageCode: 'es',
-    language: 'española'
-  }
+    id: 2,
+    languageCode: "es",
+    language: "española",
+  },
+  {
+    id: 3,
+    languageCode: "ja",
+    language: "日本",
+  },
+  {
+    id: 4,
+    languageCode: "gu",
+    language: "ગુજરાતી",
+  },
 ];
+
+export const ITEM_HEIGHT: number = 48;

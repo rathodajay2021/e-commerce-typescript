@@ -4,6 +4,8 @@ import { initReactI18next } from "react-i18next";
 //ALL FILES
 import translationEnglish from "Translation/English/translation.json";
 import translationSpanish from "Translation/Spanish/translation.json";
+import translationJapanese from "Translation/Japanese/translation.json";
+import translationGujarati from "Translation/Gujarati/translation.json";
 
 const resources = {
   en: {
@@ -11,6 +13,12 @@ const resources = {
   },
   es: {
     translation: translationSpanish,
+  },
+  ja: {
+    translation: translationJapanese,
+  },
+  gu: {
+    translation: translationGujarati,
   },
 };
 

@@ -15,10 +15,11 @@ import { useTranslation } from "react-i18next";
 //ICONS
 import { CgShoppingBag } from "react-icons/cg";
 import { AiOutlineSearch } from "react-icons/ai";
+import { MdArrowDropDown } from "react-icons/md";
 
 //CUSTOM
 import { HeaderWrapper } from "./Header.style";
-import { LANGUAGES } from "Helpers/Constants";
+import { ITEM_HEIGHT, LANGUAGES } from "Helpers/Constants";
 import { useLang } from "Context/language";
 import { languageType } from "Types/Types";
 
@@ -29,7 +30,7 @@ const Header = () => {
   const open = Boolean(anchorEl);
   const { lang, langHandler } = useLang();
 
-  const handleClose = () => {
+  const handleClose = (): void => {
     setAnchorEl(null);
   };
 
@@ -56,19 +57,22 @@ const Header = () => {
             {translate("header.navList.sales")}
           </Typography>
           <Typography
-            className="menu-list"
+            className="menu-list flex f-v-center"
             onClick={(event: React.MouseEvent<HTMLElement>) =>
               setAnchorEl(event.currentTarget)
             }
           >
             {lang.language}
+            <MdArrowDropDown
+              className={`dropdown-icon ${anchorEl && "rotate"}`}
+            />
           </Typography>
         </Box>
         <TextField
           className="search"
           size="small"
           autoComplete="off"
-          placeholder="search..."
+          placeholder={translate('header.inputField.placeHolder.search') || 'search...'}
           //   ref={SearchRef}
           InputProps={{
             classes: {
@@ -94,6 +98,12 @@ const Header = () => {
         open={open}
         onClose={handleClose}
         onClick={handleClose}
+        PaperProps={{
+          style: {
+            maxHeight: ITEM_HEIGHT * 4.5,
+            minWidth: "15ch",
+          },
+        }}
       >
         {LANGUAGES.map((language: languageType, index: number) => (
           <Box key={language.id}>

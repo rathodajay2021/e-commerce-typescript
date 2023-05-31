@@ -1,7 +1,7 @@
 export type languageType = {
   id: number;
-  languageCode: "en" | "es";
-  language: "english" | "española";
+  languageCode: "en" | "es" | "ja" | "gu";
+  language: "english" | "española" | "日本" | 'ગુજરાતી';
 };
 export type LangProviderValueType = {
   lang: languageType;

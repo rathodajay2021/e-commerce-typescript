@@ -42,6 +42,14 @@ export const HeaderWrapper = styled.div`
           cursor: pointer;
           color: ${COLORS.ORANGE_LIGHT};
         }
+
+        .dropdown-icon {
+          transition: all 0.2s ease-in-out;
+
+          &.rotate {
+            transform: rotate(-180deg);
+          }
+        }
       }
     }
 
