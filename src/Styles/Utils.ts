@@ -18,7 +18,7 @@ export const UtilityStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         background-color: white;
-        overflow: hidden;
+        /* overflow: hidden; */
         -webkit-tap-highlight-color: transparent;
     }
 
@@ -38,6 +38,7 @@ export const UtilityStyles = createGlobalStyle`
         flex-direction: column;
         ${responsive.TABLET`display : block;`}
     }
+
     .full-height {
         height: 100%;
     }

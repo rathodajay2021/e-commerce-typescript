@@ -11,3 +11,11 @@ export type LangProviderValueType = {
 export type LangProviderType = {
   children: React.ReactNode;
 };
+
+export type SliderProductsType = {
+  id: number,
+  name: string,
+  detail: string,
+  price: number,
+  img: string,
+}
