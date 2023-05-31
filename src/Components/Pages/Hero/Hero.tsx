@@ -1,16 +1,28 @@
-import { HeroWrapper } from "./Hero.style";
-import { Box, Typography, IconButton } from "@mui/material";
+//CORE
+import { useTranslation } from "react-i18next";
+import { Box, Typography } from "@mui/material";
+
+//ICON
 import { RiShoppingBagFill } from "react-icons/ri";
+
+//CUSTOM
+import { HeroWrapper } from "./Hero.style";
 import { BsArrowRight } from "react-icons/bs";
 
 const Hero = () => {
+  const { t: translate } = useTranslation();
+
   return (
     <HeroWrapper>
       {/* left side */}
       <Box className="h-sides">
-        <Typography className="text-1">Skin protection cream</Typography>
+        <Typography className="text-1">
+          {translate("hero.leftMenu.title")}
+        </Typography>
         <Box className="text-wrapper flex f-column">
-          <Typography className="text-2 title">Trendy Collection</Typography>
+          <Typography className="text-2 title">
+            {translate("hero.leftMenu.subtitle")}
+          </Typography>
           <Typography className="text-2 subtitle">
             {" "}
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
@@ -22,13 +34,13 @@ const Hero = () => {
       <Box className="middle-wrapper flex f-h-center">
         <Box className="blue-circle"></Box>
         <Box className="cover-img"></Box>
-        <Box className="cart-2">
-          <RiShoppingBagFill />
-          <Box className="sign-up">
-            <Typography>best sign up offers</Typography>
-            <IconButton>
-              <BsArrowRight />
-            </IconButton>
+        <Box className="cart-2 flex f-v-center">
+          <RiShoppingBagFill className='shopping-bag-icon' />
+          <Box className="sign-up flex f-v-center">
+            <Typography className="text">best sign up offers</Typography>
+            {/* <IconButton className="arrow-icon"> */}
+              <BsArrowRight className="arrow-icon"/>
+            {/* </IconButton> */}
           </Box>
         </Box>
       </Box>

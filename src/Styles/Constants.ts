@@ -18,6 +18,7 @@ export const COLORS = {
   YELLOW: "#F8E367",
 
   ORANGE_LIGHT: "#FE956F",
+  SKY_BLUE: '#87CEEB',
 
   //TEXT
   TEXT_LIGHT: "#252525",
